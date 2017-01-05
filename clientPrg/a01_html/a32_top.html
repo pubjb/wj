@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+    function call(){   
+        //alert("aa");
+        parent.call();
+        parent.left01.document.body.bgColor="red";
+    }
+    function calc(){
+        var first = parseInt(document.getElementById("f").value);
+        var oper = document.getElementById("oper").value;
+        var second = parseInt(document.getElementById("s").value);
+        var result;
+
+        switch(oper){
+            case "+":
+            result = first + second;
+            break;
+            case "-":
+            result = first - second;
+            break;
+            case "*":
+            result = first * second;
+            break;
+            case "/":
+            result = first / second;
+            break;
+        }
+        
+
+        parent.main01.document.body.innerHTML= ""+first + oper + second + " = " + result;
+
+    }
+    </script>
+</head>
+<body bgcolor="gray">
+    <h1 align="center" onclick="javascript:call();">top</h1>
+
+    <input type="text" id="f">
+    <input type="text" id="oper">
+    <input type="text" id="s">
+    <input type="button" value="계산" onclick="calc();">
+</body>
+</html>
