@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+<script>
+    function call(obj){
+        //alert(obj.outerHTML);
+        // obj.innerHTML = "변경된다!";
+        // obj.style.background = "yellow";
+
+        var h2Id = document.getElementById("h2Id");
+        h2Id.innerHTML = "아아아";
+        h2Id.align = "right";
+
+        var tds = document.getElementsByTagName("td");
+        for (var idx=0; idx<tds.length; idx++){
+            tds[idx].width="25%";
+            tds[idx].innerHTML = "데이터 입력";
+        }
+    }
+</script>
+</head>
+<body>
+<h1 align="center" onclick="javascript:call(this);">클릭하세요..</h1>
+<h2 id="h2Id">이것도 controller 되는가?</h2>
+
+<table align="center" border="1">
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+var cnt=0;
+var idx = 0;
+function enroll(){
+   var name = document.getElementById("nameID");
+   var birth = document.getElementById("birth");
+   var address = document.getElementById("address");
+   var hobby = document.getElementById("hobby");
+   
+   var tds = document.getElementsByTagName("td");
+   
+   
+//    tds[2].innerHTML = "test";
+    console.log(tds.length);
+    console.log();
+//    console.log(tds[0].innerHTML);
+   
+   //for(var idx=0;idx<tds.length;idx++){
+      
+      tds[idx++].innerHTML= cnt;
+      tds[idx++].innerHTML=name.value;
+      tds[idx++].innerHTML=birth.value;
+      tds[idx++].innerHTML=address.value;
+      tds[idx++].innerHTML=hobby.value;
+
+   //}
+}
+
+
+</script>
+
+</head>
+<body>
+<!-- 회원등록 
+   이름    : [   ]
+   생년월일: [   ]
+   사는곳  : [   ]
+   취미    : [   ]
+      [등록]
+
+          등록된 회원 list
+NO   이름   생년월일   사는 곳    취미
+1
+2
+-->
+<h3>회원등록</h3> 
+이름:<input type="text" id="nameID" /><br />
+생년월일: <input type="text" id="birth"/><br />
+사는 곳: <input type="text" id="address"/><br />
+취미: <input type="text" id="hobby"/><br />
+
+<button onclick="enroll()">등록</button>
+
+<table border="1">
+<caption></caption>
+   <tr>
+      <th>NO</th>
+      <th>이름</th>
+      <th>생년월일</th>
+      <th>사는 곳</th>
+      <th>취미</th>
+   </tr>
+   <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+   </tr>
+   <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+   </tr>
+   
+</table>
+
+
+
+
+
+</body>
+</html>

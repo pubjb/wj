@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+<script>
+
+
+function sleep(num){	//[1/1000초]
+			 var now = new Date();
+			   var stop = now.getTime() + num;
+			   while(true){
+				 now = new Date();
+				 if(now.getTime() > stop)return;
+			   }
+}
+
+var now = new Date();
+var s = now.getTime();
+console.log(s);
+for (var i=0; i<100; i++)
+{
+    //sleep(100);
+    var r = Math.random();
+    console.log( parseInt((r*6) + 1 ) );
+}
+var now2 = new Date();
+var e = now2.getTime();
+console.log(e - s);
+    
+</script>
+</head>
+<body>
+    
+</body>
+</html>

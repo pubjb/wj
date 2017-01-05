@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+<script>
+var totalCnt = 1000;
+var firstCnt = 0;
+var secondCnt = 0;
+var thirdCnt = 0;
+function counting(obj){
+    if (obj.id == "first"){
+        firstCnt++;
+        totalCnt--;
+        document.getElementById("total").innerHTML = totalCnt;
+        document.getElementById("fCount").innerHTML = firstCnt;
+    } else if (obj.id == "second"){
+        secondCnt++;
+        totalCnt--;
+        document.getElementById("total").innerHTML = totalCnt;
+        document.getElementById("sCount").innerHTML = secondCnt;
+
+    } else if (obj.id == "third"){
+        thirdCnt++;
+        totalCnt--;
+        document.getElementById("total").innerHTML = totalCnt;
+        document.getElementById("tCount").innerHTML = thirdCnt;
+    }
+}
+</script>
+</head>
+<body>
+현재남은 사과 : <span id="total">1000</span><br>
+<span id="first" onclick="counting(this)">첫째돼지 </span><span id="fCount"> </span><br>
+<span id="second" onclick="counting(this)">둘째돼지 </span><span id="sCount"> </span><br>
+<span id="third" onclick="counting(this)">셋째돼지 </span><span id="tCount"> </span><br>
+
+</body>
+</html>

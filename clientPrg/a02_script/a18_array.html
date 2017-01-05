@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+<script>
+window.onload = function() {
+
+    // var arrays = [];
+    // // 1) prompt로 배열에 과일종류 5개를 입력을 한다.
+    
+    
+    // var fruits = [];
+    // for (var i=0; i<5; i++){
+    //     fruits[i] = prompt("과일종류입력", "사과");
+    // }
+
+    // console.log(fruits);
+
+    // 2) 담은 5개 파일을 alert으로 출력
+
+    // 3) table의 td에 과일 종류를 담는다.
+
+    // 2단계
+    var card = new Array(new Array(13), new Array(13), new Array(13), new Array(13));
+
+    for (var i=0; i<4; i++){
+        for(var j=0; j<13; j++){
+            card[i][j] = 0;           
+        }
+    }
+
+    for (var i=0; i<4; i++){
+        for(var j=0; j<13; j++){
+            console.log(card[i][j]);
+        }
+    }
+
+    var shape = 0;
+    var num = 0 ;
+
+    var teamA = new Array(7);
+    var teamB = new Array(7);
+
+    var ranShape = 0;
+    var ranNum = 0;
+    for (var i=0; i<7; i++){
+        while (true) {
+            ranShape = Math.random(4);
+            ranNum = Math.random(13);
+
+            if (card[ranShape][ranNum] == 0){
+                card[ranShape][ranNum] = 1;
+                teamA[i] = 
+                break;
+            }
+        }
+    }
+
+
+}
+
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+<script>
+function regMember(){
+    var name = document.getElementById("nameId");
+    var birth = document.getElementById("birthId");
+    var address = document.getElementById("addressId");
+    var hobby = document.getElementById("hobbyId");
+
+    var table = document.getElementById("tableId");
+    var rowLen = table.rows.length;
+    console.log(rowLen);
+    var row = table.insertRow(rowLen);
+    row.insertCell(0).innerHTML = rowLen;
+    row.insertCell(1).innerHTML = name.value;
+    row.insertCell(2).innerHTML = birth.value;
+    row.insertCell(3).innerHTML = address.value;
+    row.insertCell(4).innerHTML = hobby.value;
+    console.log(table.rows.length);
+}
+</script>
+
+</head>
+<body>
+
+이름 : <input type="text" id="nameId"><br>
+생년월일 : <input type="text" id="birthId"><br>
+사는곳 : <input type="text" id="addressId"><br>
+취미 : <input type="text" id="hobbyId"><br>
+
+<input type="button" id="regId" value="등록" onclick="regMember()"><br>
+
+
+<br><br>
+<table id="tableId" border=1>
+    <tr>
+        <th>NO</th>
+        <th>이름</th>
+        <th>생년월일</th>
+        <th>사는곳</th>
+        <th>취미</th>
+    </tr>
+</table>
+
+
+</body>
+</html>

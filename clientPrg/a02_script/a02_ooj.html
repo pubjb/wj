@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+<script>
+// 객체 {} 임의 선언
+    var person = {};
+
+// 속성 지정
+// 1) 초기 객체 선언하면서 지정
+    var man = {name:"홍길동"};
+// 2) 선언한 후, 추가적으로 지정
+    man.age = 25;
+    // console.log(man.name);
+    // console.log(man.age);
+
+    
+    var fruit = new Array();
+    
+    fruit[0] = {
+        kind: "사과",
+        color: "사과색",
+        prdYear: "2016"
+    };
+
+    fruit[1] = {
+        kind: "바나나",
+        color: "흰색",
+        prdYear: "2016"
+    }
+
+    fruit[2] = {
+        kind: "딸기",
+        color: "빨강",
+        prdYear: "2016"
+    }
+    
+    console.log("NO\t과일\t색상\t생산년도");
+    for(i=0; i<3; i++){        
+        console.log((i+1)+"\t"+fruit[i].kind+"\t"+fruit[i].color+"\t"+fruit[i].prdYear);
+    }
+
+
+
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>
