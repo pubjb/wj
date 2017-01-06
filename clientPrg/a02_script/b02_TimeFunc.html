@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+    // 1초마다 함수 반복적으로 실행
+    window.onload = function(){
+        document.body.innerHTML = "<h1 align='center'>안녕하세요</h1>";
+
+        var interId = setInterval(function(){
+            document.body.innerHTML = "<h1 align='center'>" + new Date() + "</h1>";
+        }, 1000);
+
+        setTimeout(function(){
+            clearInterval(interId);
+            alert("10초 경과");
+        }, 10000);
+    };
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

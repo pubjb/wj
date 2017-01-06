@@ -57,7 +57,7 @@ class BookStore{
 	}
 	
 	void showCalcu(String bookName, int price, int count){
-		System.out.println(bookName + "´Ü°¡ : " + price + " " + count + "±Ç" + "ÃÑ : " + );
+		System.out.println(bookName + "´Ü°¡ : " + price + " " + count + "±Ç" + "ÃÑ : ");
 	}
 }
 
