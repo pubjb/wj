@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <script>
+        
+        window.onload = function() {
+            var html = "<table id='table' border='1'><tr><th>No</th><th>문제</th><th>정답</th></tr>";
+
+            var num1 = 0;
+            var num2 = 0;
+            var op = "";
+
+            var opers = ["+", "-", "*", "/"];
+
+            for (var i = 0; i < 4; i++) {
+                num1 = Math.floor(Math.random() * 10);
+                num2 = Math.floor(Math.random() * 10);
+                op = opers[Math.floor(Math.random() * 4)];
+
+                html += "<tr><td>" + (i + 1) + "</td>";
+                html += "<td>" + num1 + op + num2 + "</td>";
+                html += "<td onclick='oper(this," + num1 + "," + "\"" + op + "\"" + "," + num2 + ")'>클릭</td></tr>";
+            }
+
+            html += "</table>";
+
+            document.body.innerHTML = html;
+            console.log(html);
+        }
+
+        function oper(){
+            var obj = arguments[0];
+            var num1 = parseInt(arguments[1]);
+            var op = arguments[2];
+            var num2 = parseInt(arguments[3]);
+            var result = 0;
+
+            switch(op) {
+            case "+":
+                result = num1 + num2;
+                break;
+            case "-":
+                result = num1 - num2;
+                break;
+            case "*":
+                result = num1 * num2;
+                break;
+            case "/":
+                result = num1 / num2;
+                break;
+            }
+
+            obj.innerHTML = result;
+        }
+
+        function sumAll() {
+            //alert(arguments + " : " + arguments.length);
+
+            var sum = 0;
+            for (var i = 0; i < arguments.length; i++) {
+                sum += arguments[i];
+            }
+
+            document.getElementsByTagName("h1")[0].innerHTML = "합계 : " + sum;
+        }
+
+        function sum() {
+            var sum = 0;
+
+            for (var i = 0; i < arguments.length; i++) {
+                sum += arguments[i];
+            }
+
+            document.getElementsByTagName("h1")[1].innerHTML = "1 + 5 = " + sum;            
+        }
+
+
+    </script>
+</head>
+<body>
+    <!--<h1 align="center" onclick="sumAll(1,2,3,4,5)">1~5 합산</h1>
+
+    <br><br><br>
+
+    <h1 align="center" onclick="sum(1,5)">1 + 5 계산하기</h1>-->
+    
+    <!--<table id='table' border='1'>
+        <tr>
+            <th>No</th>
+            <th>문제</th>
+            <th>정답</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>9/2</td>
+            <td onclick='oper(9,/,2)'>클릭</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>4/6</td>
+            <td onclick='oper(4,/,6)'>클릭</td>
+        </tr>
+        
+        
+        
+        <tr><td>3</td><td>5*6</td><td onclick='oper(5,*,6)'>클릭</td></tr><tr><td>4</td><td>3*3</td><td onclick='oper(3,*,3)'>클릭</td></tr></table>-->
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <script>
+        window.onload = function() {
+            
+        }
+/*
+1. 객체 형태
+    1. json(*)
+        var obj = {};
+    2. 함수형        
+        function 객체명(입력값1, 입력값2){
+            this.속성1 = 입력값1;
+            this.속성2 = 입력값2;
+        }
+        var 객체참조 = new 객체명(입력값1, 입력값2, ...);
+*/        
+
+        function Student(name, kor, eng, math) {
+            this.name = name;
+            this.kor = kor;
+            this.eng = eng;
+            this.math = math;
+            this.tot = function() {
+                return this.kor + this.math + this.eng;
+            }
+
+            this.avg = function() {
+                return this.tot() / 3;
+            }
+        }
+        var stu01 = new Student("홍길동", 99, 99, 99);
+        //alert(stu01.name + " : " + (stu01.kor+stu01.eng+stu01.math));
+        console.log(stu01.avg());
+
+
+        function Car(kind, cc, maxSpeed) {
+            this.kind = kind;
+            this.cc = cc;
+            this. maxSpeed = maxSpeed;
+        }
+        var car1 = new Car("그거", 1000, 2000);
+        console.log(car1.kind, car1.cc, car1.maxSpeed);
+
+        function cost(name, tran_fee1, tran_fee2, lunch, dinner) {
+            this.name = name;
+            this.tran_fee1 = tran_fee1;
+            this.tran_fee2 = tran_fee2;
+            this.lunch = lunch;
+            this.dinner = dinner;
+            this.tot = function() {
+                return this.tran_fee1 + this.tran_fee2 + this.lunch + this.dinner;
+            }
+        }
+
+        var c1 = new cost("홍길동", 200, 200, 500, 1000);
+
+        var html = "";
+        html += c1.name + "님 일일 통학 비용<br><br>";
+        html += "교통비1 : " + c1.tran_fee1 + "<br>";
+        html += "교통비2 : " + c1.tran_fee2 + "<br>";
+        html += "점심 : " + c1.lunch + "<br>";
+        html += "저녁 : " + c1.dinner + "<br>";
+        html += "총 비용 : " + c1.tot() + "<br>";
+
+        document.writeln(html);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

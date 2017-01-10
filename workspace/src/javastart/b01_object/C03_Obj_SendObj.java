@@ -189,7 +189,7 @@ public class C03_Obj_SendObj {
 //		
 //		bs.showAll();
 		
-		Bus b = new Bus(114);		
+		Bus b = new Bus(114);
 		
 		Passenger p1 = new Passenger("±è°³¶Ë", 10000);
 		p1.showMoney();

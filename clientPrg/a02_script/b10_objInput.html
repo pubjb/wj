@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <script>
+        window.onload = function() {
+            var show = "<table align='center' border='1'>";
+
+            for (var i = 0; i < students.length; i++) {
+                show += "<tr width='300px'>";
+                show += "<td>" + students[i].name + "</td>";
+                show += "<td>" + students[i].kor + "</td>";
+                show += "<td>" + students[i].eng + "</td>";
+                show += "<td>" + students[i].math + "</td>";
+                show += "<td>" + students[i].getSum() + "</td>";
+                show += "<td>" + students[i].getAvg() + "</td>";
+                show += "</tr>";
+            }
+
+            show += "</table>";
+
+            document.body.innerHTML = show;
+            
+        }
+
+        var students = [];
+        // 배열에 객체 할당
+        // [] ==> {}
+        // index 할당하는 방법
+        // array[idx] = {속성: 속성값};
+        // 객체 자체를 push
+        // array.push){속성: 속성값});
+        students.push({name: "홍길동", kor: 70, eng: 20, math: 70});
+        students.push({name: "홍길동", kor: 10, eng: 32, math: 20});
+        students.push({name: "홍길동", kor: 72, eng: 83, math: 93});
+        students.push({name: "홍길동", kor: 74, eng: 82, math: 11});
+        students.push({name: "홍길동", kor: 10, eng: 20, math: 22});
+        //alert(students.length);
+
+        // javascript: for ( 배열index in 배열 ) ex) for ( 객체의 속성 in 객체 )
+        // java: for ( 단위객체 : 배열객체 ) ex) for ( Person p : persons )
+
+        for (var i in students) {
+            students[i].getSum = function() {
+                return this.kor + this.eng + this.math; 
+            }
+            
+            students[i].getAvg = function() {
+                return this.getSum() / 3;
+            }
+        }
+
+        for (var i in students) {
+            console.log(students[i].getSum());
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

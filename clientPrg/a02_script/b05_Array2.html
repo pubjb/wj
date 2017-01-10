@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <script>
+        
+        window.onload = function() {
+            var tds = document.getElementsByTagName("td");
+            var colors = [];
+
+            for (var i=0; i<3; i++) {
+                colors[i] = prompt("색깔을 입력하세요");
+            }
+
+            console.log(colors);
+
+            
+            console.log(tds[0]);
+            console.log(tds[1]);
+            console.log(tds[2]);
+            console.log(tds.length);
+
+            for (var i=0; i<3; i++) {
+                tds[i].innerHTML = colors[i];
+                tds[i].bgColor = colors[i];
+            }
+            
+        }
+
+        // // json 형식
+        // var array = [];
+        // array[0] = "하이1";
+        // array[1] = "하이2";
+
+        // console.log(array);
+
+        // for (var i = 0; i < 5; i++) {
+        //     array.push("안녕!" + i);
+        // }
+
+        // console.log(array);
+
+        // // 객체
+        // var array1 = Array();
+        // var array2 = Array(10, 20, 30);
+        // var array3 = Array("hi", "gut", "tag");
+        // array3.push("nice");
+
+        // console.log(array1);
+        // console.log(array2);
+        // console.log(array3);
+
+        
+
+
+
+    </script>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    
+</body>
+</html>
